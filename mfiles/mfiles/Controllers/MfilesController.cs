@@ -99,7 +99,7 @@ namespace mfiles.Controllers
                 var commands = new List<Example>();
                 foreach (var p in itemtop)
                 {
-                    var clientz = new RestClient($"{connString}/REST/objects/104/e{Applicantid}/latest");
+                    var clientz = new RestClient($"{connString}/REST/objects/104/e{iteminlist.id}/latest");
                     clientz.Timeout = -1;
                     var requestz = new RestRequest(Method.GET);
                     requestz.AddHeader("X-Authentication", $"{authenticationToken}");
